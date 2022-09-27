@@ -5,6 +5,7 @@ package org.example.patterns.singleton;
  *
  * the instance is created when the class is loaded.
  * drawback: the instance is created even though client application might not be using it.
+ * note: never use this approach!
  */
 public class EagerInitializationSingleton {
 

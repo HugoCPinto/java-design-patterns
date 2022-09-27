@@ -1,6 +1,8 @@
 package org.example.patterns;
 
 import org.example.patterns.singleton.EagerInitializationSingleton;
+import org.example.patterns.singleton.StaticBlockSingleton;
+
 import java.util.logging.Logger;
 
 /**
@@ -11,6 +13,9 @@ public class Main {
     private static final Logger LOGGER = Logger.getLogger( Main.class.getName() );
 
     public static void main(String[] args) {
+        // singleton
         LOGGER.info(EagerInitializationSingleton.getInstance().getHello());
+        LOGGER.info(StaticBlockSingleton.getInstance().getHello());
+
     }
 }
