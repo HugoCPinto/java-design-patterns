@@ -1,5 +1,7 @@
 package org.example.patterns;
 
+import org.example.patterns.factory.Car;
+import org.example.patterns.factory.CarFactory;
 import org.example.patterns.singleton.EagerInitializationSingleton;
 import org.example.patterns.singleton.LazyInitializationSingleton;
 import org.example.patterns.singleton.StaticBlockSingleton;
@@ -22,5 +24,8 @@ public class Main {
         LOGGER.info(ThreadSafeSingleton.getInstance().getHello());
         LOGGER.info(ThreadSafeSingleton.getInstanceWithBetterPerformance().getHello());
 
+        //factory
+        Car car = CarFactory.getCar("bmw", "this is a bmw car", 2);
+        LOGGER.info(car.toString());
     }
 }
